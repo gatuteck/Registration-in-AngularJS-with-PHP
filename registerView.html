@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AuroChat Australia Chat</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	  <script src="js/jquery.min.js"></script>
+	  <!-- Include all compiled plugins (below), or include individual files as needed -->
+	  <script src="js/angular/angular.js"></script>
+	  <script src="js/angular/angular-route.min.js"></script>
+	  <script src="js/controller/navbarCtrl.js"></script>   
+	  <script src="js/bootstrap/bootstrap.min.js"></script>
+  </head>
+  <body ng-app="myApp">  	
+    <div ng-controller="navbarCtrl">
+		<div ng-include="'navbar.html'"></div>
+    </div>
+    <div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-horizontal" role="form" name="registerForm" ng-controller="registerUser" 
+				ng-submit="save()">
+			      <div class="form-group">
+			        <label for="inputName3" class="col-sm-2 control-label">Name</label>
+			        <div class="col-sm-4">
+			          <input class="form-control" id="inputName3" placeholder="Name" ng-model="user.name">
+			        </div>
+			      </div>
+			      <div class="form-group">
+			        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			        <div class="col-sm-4">
+			          <input class="form-control" id="inputEmail3" placeholder="Email" ng-model="user.email">
+			        </div>
+			      </div>
+			      <div class="form-group">
+			        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			        <div class="col-sm-4">
+			          <input class="form-control" id="inputPassword3" placeholder="Password" ng-model="user.password">
+			        </div>
+			      </div>
+			      <div class="form-group">
+			        <label for="reinputPassword3" class="col-sm-2 control-label">Re Password</label>
+			        <div class="col-sm-4">
+			          <input class="form-control" id="reinputPassword3" placeholder="Re Password" ng-model="user.rePassword">
+			        </div>
+			      </div>
+			      <div class="form-group">
+			        <div class="col-sm-offset-2 col-sm-10">
+			          <button type="submit" class="btn btn-success">Sign up</button>
+			        </div>
+			      </div>
+			    </form>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
